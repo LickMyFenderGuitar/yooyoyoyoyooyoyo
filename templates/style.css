@@ -1,0 +1,161 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(14, 14, 14); /* Dark background */
+    color: rgb(200, 200, 200); /* Soft light gray text */
+    display: flex;
+    height: 100vh;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+/* Sidebar Styles */
+#sidebar {
+    width: 250px;
+    background-color: rgb(14, 14, 14); /* Consistent dark color */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 1px solid rgb(25, 25, 25); /* Subtle dividing line */
+}
+
+.room {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: rgb(25, 25, 25); /* Darker shade for room items */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.room:hover {
+    background-color: rgb(35, 35, 35); /* Slightly lighter on hover */
+}
+
+button {
+    padding: 12px;
+    background-color: rgb(25, 25, 25); /* Subtle button background */
+    color: rgb(200, 200, 200); /* Light text */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    outline: none;
+}
+
+button:hover {
+    background-color: rgb(35, 35, 35); /* Subtle hover effect */
+}
+
+#continue-btn {
+    display: none;
+}
+
+/* Chat Container */
+#chat-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(14, 14, 14); /* Consistent dark color */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 10px;
+}
+
+.message {
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    word-wrap: break-word;
+    max-width: 80%;
+}
+
+.user {
+    background-color: rgb(25, 25, 25); /* User message background */
+    align-self: flex-end;
+    color: rgb(200, 200, 200); /* Light text for readability */
+}
+
+.bot {
+    background-color: rgb(25, 25, 25); /* Bot message background */
+    align-self: flex-start;
+    color: rgb(200, 200, 200); /* Light text for readability */
+    white-space: pre-wrap;
+}
+
+.code {
+    background-color: rgb(25, 25, 25); /* Code block background */
+    color: rgb(150, 150, 150); /* Slightly muted text for code */
+    border: 1px solid rgb(35, 35, 35); /* Subtle border */
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: 'Courier New', monospace;
+    margin-top: 10px;
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(35, 35, 35); /* Slightly darker header */
+    color: rgb(200, 200, 200); /* Light text */
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.code-content {
+    padding: 10px;
+    white-space: pre; /* Preserve formatting */
+}
+
+.copy-button {
+    background-color: rgb(25, 25, 25); /* Button matches dark theme */
+    color: rgb(200, 200, 200); /* Light text */
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.copy-button:hover {
+    background-color: rgb(45, 45, 45); /* Slightly brighter on hover */
+}
+
+/* New Styles for Textarea */
+textarea {
+    width: 80%;
+    padding: 12px;
+    background-color: rgb(25, 25, 25); /* Dark textarea field */
+    color: rgb(200, 200, 200); /* Light text */
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: none; /* Disable manual resizing */
+    outline: none; /* Remove the default outline on focus */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Modern shadow */
+    transition: box-shadow 0.3s;
+}
+
+textarea:focus {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Focus shadow */
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
