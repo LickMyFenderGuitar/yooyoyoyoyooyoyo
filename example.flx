@@ -1,0 +1,28 @@
+static mod system<extern: "system">; // if your confused with the extern: "system" thing basically what it does is it allows flux to dynamically import other files. The reason for this feature is because things like the system package wouldnt be possible to use since the system package is made in c++.
+
+
+fn main() {
+    static in user_input = system.in();
+    static out string_variable = "hello from string!";
+
+    system.println("hello, world!" + string_variable);
+}
+
+"main" extends system::autom; // this ensures that the main will automatically run.
+
+/*
+example of multi line comment.
+
+reasons why doing "main" extends system:autom;
+
+it will check for the function "main" but if function insnt found then continue.
+
+if you used:
+
+main();
+
+instead, you would get a error that main inst found.
+thats why doing:
+"main" extends system:autom;
+is more efficient than doing main();
+*/
